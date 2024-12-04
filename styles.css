@@ -1,4 +1,37 @@
-body{
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
-background-color: aqua
-};
+header {
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+form button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+

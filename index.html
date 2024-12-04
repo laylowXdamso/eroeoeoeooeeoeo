@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    lroorororirir
-    <form action="post">
-
-<input type="text">gugugugugu
-
-
-    </form>
+    <header>
+        <h1>Bienvenue sur mon Portfolio</h1>
+    </header>
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis développeur passionné par le web et l'analyse de données.</p>
+    </section>
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <ul>
+            {% for project in projects %}
+                <li>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="/contact" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon Portfolio</h1>
+    </header>
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis développeur passionné par le web et l'analyse de données.</p>
+    </section>
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <ul>
+            {% for project in projects %}
+                <li>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="/contact" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 </body>
 </html>
